@@ -12,8 +12,7 @@ export function createAppsFlyerLogEvent(server: McpServer): void {
       title: "Create AppsFlyer Log Event",
       description: descriptions.createAppsFlyerLogEvent,
       inputSchema: {
-        inputChoice: z.string().optional().describe("User input choice: '1' for JSON, '2' for manual input"),
-        useJsonInput: z.boolean().optional().describe("Whether to use JSON input for event definitions"),
+        useJsonInput: z.boolean().optional().describe("Whether to use JSON input or manuall input"),
 
         // JSON input method fields
         inputMethod: z.enum(["search", "paste", "filepath"]).optional(),

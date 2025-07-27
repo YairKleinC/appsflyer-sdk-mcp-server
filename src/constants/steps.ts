@@ -103,6 +103,7 @@ In your global \`Application\` class, import:
 
 \`\`\`java
 import com.appsflyer.AppsFlyerLib;
+import com.appsflyer.attribution.AppsFlyerRequestListener;
 \`\`\``,
 
       `**5. Add DebugLog before init**  
@@ -123,7 +124,7 @@ AppsFlyerLib.getInstance().init("<YOUR-DEV-KEY>", null, this);
 Immediately after \`init()\`, call:
 
 \`\`\`java
-AppsFlyerLib.getInstance().start(getApplicationContext(), "<YOUR-DEV-KEY>", new AppsFlyerRequestListener() {
+AppsFlyerLib.getInstance().start(getApplicationContext(), "", new AppsFlyerRequestListener() {
   @Override
   public void onSuccess() {
     // ✅ YOUR CODE UPON SUCCESS
